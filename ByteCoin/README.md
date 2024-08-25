@@ -6,14 +6,14 @@
 
 
 https://www.hackingwithswift.com/example-code/system/how-to-copy-objects-in-swift-using-copy
-```swift
+```
 let rate = String(format: "%2f", decodedData.rate)
 let newData = decodedData.copy() as! CoinData
 newData.rate = rate
-``
+```
 
 ### class 
-```swift
+```
 class CoinData: Codable, NSCopying {
     func copy(with zone: NSZone? = nil) -> Any {
         return CoinData(time: time, assetIDBase: assetIDBase, assetIDQuote: assetIDQuote, rate: rate)
